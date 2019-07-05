@@ -17,6 +17,7 @@
 
     <body background=https://www.freepptbackgrounds.net/wp-content/uploads/2019/04/Funny-Movies-Backgrounds.jpg>
         <form id="form1" runat="server">
+            
         <div>
         </div>
         <div class="container separador">
@@ -31,16 +32,19 @@
                         <div >
                             <div class="form-group" >
                             <label for="exampleInputEmail1">Código</label>
-                            <input type="" class="form-control" id="exampleInputEmail1" name="Code" aria-describedby="emailHelp" maxlength="6" placeholder="" required>
+                            <asp:TextBox ID="Code" runat="server" class="form-control" maxlength="6" placeholder="" required="true"></asp:TextBox>
+                            
 
                             <label for="exampleInputEmail1">Nombre</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" name="Name" aria-describedby="emailHelp" maxlength="20" placeholder="" value=" ">
+                            <asp:TextBox ID="Name" runat="server" class="form-control" maxlength="20" placeholder="" required="true"></asp:TextBox>
+                           
 
                             <label for="exampleInputEmail1">Descripción</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" name="Descrip" aria-describedby="emailHelp" maxlength="120" placeholder="" required>
+                            <asp:TextBox ID="Descrip" runat="server" class="form-control" maxlength="120" placeholder="" required="true"></asp:TextBox>
+                   
 
                             <label for="exampleInputEmail1">Fecha de estreno</label>
-                            <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+                            <asp:Calendar ID="Date" runat="server"></asp:Calendar>
                                     <br>
                                     <br>
                                     <div class="form-label-group">
@@ -71,11 +75,12 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body" id="img-body">
                             <asp:FileUpload ID="FileUpload1" runat="server" />
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Añadir</button>
                         </div>
                     </div>
                 </div>

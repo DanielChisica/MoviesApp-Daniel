@@ -24,15 +24,17 @@ namespace DemoDatos.Modelo
         //************************************************************************
         //************************************************************************
         //Método para realizar la inserción del registro
-        public bool insertarRegistro(string nombre, string estado)
+        public bool insertarRegistro(string code, string name, string descript, DateTime date)
         {
             bool seInserto = false;
             try
             {
-                cmd = new SqlCommand("insert into tbl_Record(Name,State) values(@name,@state)", con);
+                cmd = new SqlCommand("insert into Movies(codigo,nombre,descripcion,fecha) values(@codigo,@nombre,@descripcion,@fecha)", con);
                 con.Open();
-                cmd.Parameters.AddWithValue("@name", nombre);
-                cmd.Parameters.AddWithValue("@state", estado);
+                cmd.Parameters.AddWithValue("@codigo", code);
+                cmd.Parameters.AddWithValue("@nombre", name);
+                cmd.Parameters.AddWithValue("@descripcion", descript);
+                cmd.Parameters.AddWithValue("@fecha", date);
                 cmd.ExecuteNonQuery();
                 seInserto = true;
             }
