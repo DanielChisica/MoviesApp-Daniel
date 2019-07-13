@@ -51,7 +51,7 @@ namespace DemoDatos.crudtabla
                 System.Diagnostics.Debug.WriteLine("departamento seleccionado: " + idDepartamento);
 
                 //2.  Llamar el modelo
-                seInserto = controladorAccesoDatos.insertarRegistro(nombre, idDepartamento.ToString());
+                //seInserto = controladorAccesoDatos.insertarRegistro(nombre, idDepartamento.ToString());
 
                 //3.  Actualizamos la vista
                 if (seInserto == true)

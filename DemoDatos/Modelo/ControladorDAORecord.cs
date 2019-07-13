@@ -29,7 +29,7 @@ namespace DemoDatos.Modelo
             bool seInserto = false;
             try
             {
-                cmd = new SqlCommand("insert into Movies(codigo,nombre,descripcion,fecha) values(@codigo,@nombre,@descripcion,@fecha)", con);
+                cmd = new SqlCommand("insert into dbo.Movie(codigo,nombre,descripcion,fecha) values(@codigo,@nombre,@descripcion,@fecha)", con);
                 con.Open();
                 cmd.Parameters.AddWithValue("@codigo", code);
                 cmd.Parameters.AddWithValue("@nombre", name);
